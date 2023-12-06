@@ -3,68 +3,197 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cozumel Rentals</title>
+    <title> Home | Fortunate Kwenda</title>
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/final.css">
-</head>
+    <meta name="author" content="Fortunate Kwenda">
+    <meta name="description" </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="rentals.html">Rentals</a></li>
-                <li><a href="reservations.html">Re-servations</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="contact-info">
-            <p>Phone: 123-456-7890</p>
-            <p>Email: info@cozumelrentals.com</p>
-        </div>
-    </header>
+    <div class="hero">
+        <picture>
+            <source media="(max-width: 400px)" srcset="images/heroSmall.jpg">
+            <source media="(max-width: 600px)" srcset="images/heroMedium.jpg">
+            <source media="(max-width: 800px)" srcset="images/heroLarge.jpg">
+            <img src="images/heroLarge.jpg" alt="Tourists enjoying in the beach">
+        </picture>
+        <img class="logo" src="images/logo.jpg" alt="scoots logo">
+        <a class="btn" href="reservations.html">Make a Reservation</a>
+    </div>
+    <nav>
+        <ul class="navigation">
+            <li>
+                <a href="#" id="hamBtn"><i class="fas fa-bars"></i> Menu</a>
+            </li>
+            <li>
+                <a href="index.html" class="active">Home</a>
+            </li>
+            <li>
+                <a href="rentals.html">Rentals</a>
+            </li>
+            <li>
+                <a href="reservations.html">Reservations</a>
+            </li>
 
-    <section class="hero">
-        <!-- Images and content for the landing page -->
-    </section>
-
-    <section class="reservation">
-        <h2>Make a Rental Reservation</h2>
-        <p>Summary information about all the types of rentals.</p>
-        <a href="reservations.html" class="cta-button">Book Now</a>
-    </section>
-
-    <section class="weather">
-        <div id="current-weather">
-            <!-- Weather information will be dynamically inserted here using JavaScript -->
-        </div>
-        <div id="weather-alert">
-            <!-- Weather alert message will be displayed here (if available) -->
-        </div>
-        <div id="one-day-forecast">
-            <!-- One-day forecast will be displayed here -->
-        </div>
-    </section>
-
-    <footer>
-        <ul class="social-media">
-            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="google"><i class="fa fa-google"></i></a>
-            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
         </ul>
-        <div class="footer-text">
-            <p>&copy; <span id="myYear"></span> 2023 Cozumel Rentals| Fortunate Kwenda | WDD 230 Project | Last
-                Modification:
-                <script type="text/javascript"> document.write(new Date(document.lastModified))</script>
-            </p>
-        </div>
-        <!-- <p>&copy; 2023 Cozumel Rentals. All rights reserved.</p> -->
-    </footer>
+    </nav>
+    <main>
+        <section class="type-rentals">
+            <h2>Type of Rentals</h2>
+            <div>
+                <picture>
+                    <source media="(max-width: 799px)" srcset="images/hondaPCX280w.jpg">
+                    <source media="(min-width: 800px)" srcset="images/hondaPCX400w.jpg">
+                    <img src="images/hondaPCX400w.jpg" alt="picture of Honda PCX150">
+                </picture>
+                <h3>Honda Motor Scooters</h3>
+                <ul class="list">
+                    <li>Honda Metropolitan (49cc) - 1 person.</li>
+                    <li>Honda Dio (110cc) - 2 person.</li>
+                    <li>Honda PCX150 (149cc) - 2 person.</li>
+                </ul>
+            </div>
+            <div>
+                <picture>
+                    <source media="(max-width: 799px)" srcset="images/hondaPioneer280w.jpg">
+                    <source media="(min-width: 800px)" srcset="images/hondaPioneer400w.jpg">
+                    <img src="images/hondaPioneer400w.jpg" alt="picture of Pioneer 1000">
+                </picture>
+                <h3>ATV Side-by-Side</h3>
+                <ul class="list">
+                    <li>Honda Pioneer 1000.</li>
+                </ul>
+            </div>
+            <div>
+                <picture>
+                    <source media="(max-width: 799px)" srcset="images/jeepWrangler280w.jpg">
+                    <source media="(min-width: 800px)" srcset="images/jeepWrangler400w.jpg">
+                    <img src="images/jeepWrangler400w.jpg" alt="picture of 4 door Jeep Wrangler">
+                </picture>
+                <h3>Jeep Rentals</h3>
+                <ul class="list">
+                    <li>4-door Jeep Wrangler - manual with A/C - 5 people max.</li>
+                    <li>2-door Jeep Wrangler - open air - manual - 4 people max.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="weather">
+            <h2>Weather in Cozumel</h2>
+            <div>
+                <img src=" " alt="Icon of the current weather" id="iconWeather">
+                <div>
+                    <p>Temperature: <span id="temp"></span>°F</p>
+                    <p>Description: <span id="curr"></span></p>
+                    <p>Humidity: <span id="hum"></span>%</p>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <th><span id="nameDay1"></span></th>
+                    <th><span id="nameDay2"></span></th>
+                    <th><span id="nameDay3"></span></th>
+                    <th><span id="nameDay4"></span></th>
+                    <th><span id="nameDay5"></span></th>
+                </tr>
+                <tr>
+                    <td><img src=" " alt="image forecast" id="imgForecast2"></td>
+                    <td><img src=" " alt="image forecast" id="imgForecast10"></td>
+                    <td><img src=" " alt="image forecast" id="imgForecast18"></td>
+                    <td><img src=" " alt="image forecast" id="imgForecast26"></td>
+                    <td><img src=" " alt="image forecast" id="imgForecast34"></td>
+                </tr>
+                <tr>
+                    <td><span id="tempForecast2"></span>°F</td>
+                    <td><span id="tempForecast10"></span>°F</td>
+                    <td><span id="tempForecast18"></span>°F</td>
+                    <td><span id="tempForecast26"></span>°F</td>
+                    <td><span id="tempForecast34"></span>°F</td>
+                </tr>
+            </table>
+        </section>
+        <section class="contact">
+            <h2>Contact</h2>
+            <div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.8590777853124!2d-86.95296768580714!3d20.51200241059551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e59cf3a0ece15%3A0x9216e3c2b55e5526!2sPlaya%20del%20Carmen-Cozumel%20Ferry%20Dock!5e0!3m2!1sen!2spe!4v1594792384520!5m2!1sen!2spe"
+                    width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+                <address>
+                    <ul>
+                        <li>
+                            <i class="fa fa-phone-square" aria-hidden="true"></i>
+                            <a href="#">Phone: 999-999-999</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <a href="#">Email: contact@cozumelscooters.com</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <a href="#">Adress: Playa del Carmen-Cozumel Ferry dock</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <a href="#">Adress: Terminal Puerta Maya</a>
+                        </li>
+                    </ul>
+                </address>
 
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><i class="far fa-copyright"></i> Fortunate Kwenda 2023</p>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="rentals.html">Rentals</a>
+            </li>
+            <li>
+                <a href="reservations.html">Reservations</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+        <p>Last Updated: <span id="updatedDate"></span></p>
+        <ul class="social-list">
+            <li>
+                <a href="#" title="Facebook">
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Instagram">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Twitter">
+                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="scripts/home.js"></script>
     <script src="scripts/final.js"></script>
+    <script src="https://kit.fontawesome.com/2bdc0b59cd.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Roboto:300,400,700']
+            }
+        });
+    </script>
+
 </body>
 
 </html>
